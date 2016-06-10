@@ -3,6 +3,7 @@ var ajax = require('ajax');
 var Vector2 = require('vector2');
 var Accel = require('ui/accel');
 var Vibe = require('ui/vibe');
+var menu = require('menu');
 
 var myAPIKey = '3fc21082d94fd421313b5eb0bcb67049';
 
@@ -77,10 +78,10 @@ resultsMenu.on('select', function(e) {
   content = content.charAt(0).toUpperCase() + content.substring(1);
 
   // Add temperature, pressure etc
-  content += '\n' + 
+  content += '\n' +
     'Temperature: ' + Math.round(forecast.main.temp - 273.15) + '°C' +
     '\nPressure: ' + Math.round(forecast.main.pressure) + ' mbar' +
-    '\nWind: ' + Math.round(forecast.wind.speed) + ' mph, ' + 
+    '\nWind: ' + Math.round(forecast.wind.speed) + ' mph, ' +
     Math.round(forecast.wind.deg) + '°';
 
       // Create the Card for detailed view
@@ -95,7 +96,7 @@ resultsMenu.on('select', function(e) {
     // Show the Menu, hide the splash
     resultsMenu.show();
     splashWindow.hide();
-    
+
     // Register for 'tap' events
     resultsMenu.on('accelTap', function(e) {
       // Make another request to openweathermap.org
@@ -107,10 +108,10 @@ resultsMenu.on('select', function(e) {
         function(data) {
           // Create an array of Menu items
           var newItems = parseFeed(data, 10);
-          
+
           // Update the Menu's first section
           resultsMenu.items(0, newItems);
-          
+
           // Notify the user
           //Vibe.vibrate('short');
         },
