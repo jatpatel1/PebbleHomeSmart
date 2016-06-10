@@ -3,8 +3,8 @@
     "capabilities": [
         ""
     ],
-    "companyName": "Pebble",
-    "longName": "Pebble.js Tutorial 3-Final",
+    "companyName": "Jatin Patel Ltd",
+    "longName": "Home Smart",
     "projectType": "pebblejs",
     "resources": {
         "media": [
@@ -32,7 +32,7 @@
         ]
     },
     "sdkVersion": "3",
-    "shortName": "P.js Tut 3-3",
+    "shortName": "Home Smart",
     "uuid": "07d6c8f8-f5b9-4dbd-9f31-30f33e768fcd",
     "versionCode": 1,
     "versionLabel": "1.0",
